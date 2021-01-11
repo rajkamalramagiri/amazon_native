@@ -7,8 +7,9 @@ import {
   DrawerItemList,
   DrawerItem,
 } from '@react-navigation/drawer';
-import HomeScreen from './HomeScreen';
-import SettingScreen from './SettingScreen';
+// import HomeScreen from './HomeScreen';
+// import SettingScreen from './SettingScreen';
+import HomeScreen from './screens/HomeScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -17,7 +18,7 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator>
         <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Settings" component={SettingScreen} />
+        {/* <Drawer.Screen name="Settings" component={SettingScreen} /> */}
       </Drawer.Navigator>
     </NavigationContainer>
   );
