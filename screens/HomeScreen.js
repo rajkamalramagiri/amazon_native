@@ -177,7 +177,7 @@ class HomeScreen extends Component {
               itemPrice="$10"
               savings="2.5"
               imageUri={require('../assets/recommended_3.jpg')}
-              rating={4}
+              rating={2}
             />
             <RecommendedCardItem
               itemName="You can heal your life"
@@ -185,7 +185,7 @@ class HomeScreen extends Component {
               itemPrice="$10"
               savings="2.5"
               imageUri={require('../assets/recommended_2.jpg')}
-              rating={4}
+              rating={3}
             />
           </Card>
         </Content>
