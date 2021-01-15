@@ -7,11 +7,29 @@ import {
   DrawerItemList,
   DrawerItem,
 } from '@react-navigation/drawer';
+import {
+  Icon,
+  Container,
+  Header,
+  Left,
+  Body,
+  Right,
+  List,
+  ListItem,
+} from 'native-base';
 // import HomeScreen from './HomeScreen';
 // import SettingScreen from './SettingScreen';
 import HomeScreen from './screens/HomeScreen';
 
 const Drawer = createDrawerNavigator();
+
+const CustomDrawerContentContainer = (props) => {
+  return (
+    <Container>
+      <Header style={{backgroundColor: '#3a455c', height: 90}}></Header>
+    </Container>
+  );
+};
 
 export default function App() {
   return (

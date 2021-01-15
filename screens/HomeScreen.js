@@ -17,8 +17,10 @@ import {
   Icon,
   Item,
   Input,
+  Card,
+  CardItem,
 } from 'native-base';
-
+import RecommendedCardItem from '../components/RecommendedCardItem';
 import Swiper from 'react-native-swiper';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 class HomeScreen extends Component {
@@ -36,6 +38,7 @@ class HomeScreen extends Component {
           ]}>
           <Left style={{flexDirection: 'row', alignItems: 'center'}}>
             <Icon
+              // onPress={() => this.props.navigation.navigate('DrawerOpen')}
               name="md-menu"
               style={{color: 'white', marginRight: 15}}></Icon>
             <FAIcon
@@ -91,7 +94,7 @@ class HomeScreen extends Component {
                 borderRadius: 4,
               }}>
               <Icon name="search" style={{fontSize: 20}} />
-              <Input placeholder="Search..." />
+              <Input placeholder="Search" />
             </Item>
           </View>
         </View>
@@ -153,6 +156,38 @@ class HomeScreen extends Component {
               />
             </View>
           </Swiper>
+          <Card style={{marginLeft: 5, marginRight: 5}}>
+            <CardItem
+              header
+              style={{borderBottomColor: '#dee0e2', borderBottomWidth: 1}}>
+              <Text>Your Recommendations</Text>
+            </CardItem>
+            <RecommendedCardItem
+              itemName="You can heal your life"
+              itemCreator="Louise Hay"
+              itemPrice="$10"
+              savings="2.5"
+              imageUri={require('../assets/recommended_1.jpg')}
+              rating={4}
+            />
+
+            <RecommendedCardItem
+              itemName="You can heal your life"
+              itemCreator="Louise Hay"
+              itemPrice="$10"
+              savings="2.5"
+              imageUri={require('../assets/recommended_3.jpg')}
+              rating={4}
+            />
+            <RecommendedCardItem
+              itemName="You can heal your life"
+              itemCreator="Louise Hay"
+              itemPrice="$10"
+              savings="2.5"
+              imageUri={require('../assets/recommended_2.jpg')}
+              rating={4}
+            />
+          </Card>
         </Content>
       </Container>
     );
